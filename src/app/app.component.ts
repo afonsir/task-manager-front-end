@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'task-manager-front-end';
+  title = 'Gerenciador de Tarefas';
+  task: Task = new Task(12, 'foo');
+}
+
+export class Task {
+  public id: number;
+  public title: string;
+
+  constructor(id: number, title: string) {
+    this.id = id;
+    this.title = title;
+  }
 }
