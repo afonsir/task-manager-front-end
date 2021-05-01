@@ -19,9 +19,14 @@ const tasks: Task[] = [
   templateUrl: './tasks.component.html'
 })
 export class TasksComponents implements OnInit {
-  public tasks: any;
+  public tasks: Task[];
+  public selectedTask: Task;
 
   ngOnInit(): void {
     this.tasks = tasks;
+  }
+
+  onSelect(task: Task): void {
+    this.selectedTask = task;
   }
 }
