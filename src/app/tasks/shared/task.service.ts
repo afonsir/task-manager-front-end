@@ -16,7 +16,7 @@ const tasks: Task[] = [
 
 @Injectable()
 export class TaskService {
-  public getTasks(): Array<Task> {
-    return tasks;
+  public getTasks(): Promise<Task[]> {
+    return new Promise((resolve) => resolve(tasks))
   }
 }
